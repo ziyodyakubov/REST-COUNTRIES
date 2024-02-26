@@ -29,7 +29,7 @@
 
 <body class="bg-[#FAFAFA] ">
     <!-- HEADER SECTION STARTED -->
-    <header class="z-9999990 border-b-[1px] border-b-[#00000021] sticky top-0 shadow-md bg-[#fff]">
+    <header class="z-9999990 border-b-[1px] border-b-[#00000021] sticky top-0 shadow-md bg-transparent">
         <div class="container">
             <nav class="flex items-center justify-between py-[24px]">
                 <a href="#" class="text-[24px] font-[800]">Where in the world?</a>
@@ -49,22 +49,26 @@
         <section id="section-1" class="py-[48px]">
             <div class="container">
                 <div class="search-filter-wrapper flex items-center justify-between mb-[48px]">
-                    <div class="flex items-center bg-[#fff] shadow-md rounded-[5px]">
+                    <div class="flex items-center bg-transparent shadow-md rounded-[5px]">
                         <i class='bx bx-search-alt-2 relative text-[#666] left-[30px] text-[18px]'></i>
                         <input type="text" id="search"
-                            class="w-[480px] pl-[54px] h-[56px] bg-[#fff] outline-none rounded-[5px]"
+                            class="bg-transparent w-[480px] pl-[54px] h-[56px] bg-[#fff] outline-none rounded-[5px]"
                             placeholder="Search for a country…">
                     </div>
 
                     <div>
                         <select name="" id="region"
-                            class="cursor-pointer z-10 w-[200px] h-[56px] outline-none shadow-md rounded-[5px] bg-[#fff] py-[18px] px-[24px]">
-                            <option value="">Filter by region</option>
+                            class="bg-transparent cursor-pointer z-10 w-[200px] h-[56px] outline-none shadow-md rounded-[5px] bg-[#fff] py-[18px] px-[24px]">
+                            <option value="#">Filter by region</option>
+                            <option value="Asia">Asia</option>
+                            <option value="Europe">Europe</option>
+                            <option value="Oceania">Oceania</option>
+                            <option value="Africa">Africa</option>
                         </select>
                     </div>
                 </div>
 
-                <div class="countries-wrapper flex justify-between items-center gap-y-[60px] flex-wrap">
+                <div class="countries-wrapper flex gap-x-[50px] items-center gap-y-[60px] flex-wrap">
 
                 </div>
             </div>
@@ -81,7 +85,7 @@
 
 </body>
 <!-- DATA JS -->
-<script src="./db.js"></script>
+<script src="./../Backend/db.js"></script>
 
 <!-- MY JS -->
 <script src="./index.js"></script>
